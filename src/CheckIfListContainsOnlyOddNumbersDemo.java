@@ -11,8 +11,17 @@ public class CheckIfListContainsOnlyOddNumbersDemo {
         return true;
     }
     public static void main(String[] args) {
-        List<Integer> intList = Arrays.asList(1,2,3,5,7,9);
+        List<Integer> intList = Arrays.asList(1,3,5,7,9);
         if(checkOnlyOddNumber(intList)){
+            System.out.println("List contains only odd numbers");
+        }else{
+            System.out.println("List doesn't contains only odd numbers");
+        }
+        //using streams
+        boolean allOdd = intList
+                .stream()
+                .allMatch(i -> i%2 != 0);
+        if(allOdd){
             System.out.println("List contains only odd numbers");
         }else{
             System.out.println("List doesn't contains only odd numbers");
