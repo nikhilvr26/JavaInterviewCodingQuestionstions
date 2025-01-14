@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class DuplicatesElementInArray {
 
@@ -20,8 +19,25 @@ public class DuplicatesElementInArray {
             System.out.println("No duplicates!!");
         }
     }
+
+    public static void duplicate(int[] intArr){
+        Set<Integer> original = new HashSet<>();
+        Set<Integer> duplicates = new HashSet<>();
+        for(int i : intArr){
+            if(!original.add(i)){
+                duplicates.add(i);
+            }
+        }
+        if (duplicates.isEmpty()){
+            System.out.println("No Duplicates");
+        }else{
+            System.out.println(duplicates);
+        }
+    }
     public static void main(String[] args) {
         String[] strArray = {"Apple", "Banana", "Grapes", "Apple", "Grapes"};
         duplicatesElementInArray(strArray);
+        int[] intArr = {1,2,3,4,5,4,5};
+        duplicate(intArr);
     }
 }
