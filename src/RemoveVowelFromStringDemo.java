@@ -1,7 +1,8 @@
 public class RemoveVowelFromStringDemo {
+
     public static void main(String[] args) {
         String input = "Hi my name is Nikhil!";
-        StringBuffer result = new StringBuffer(); // creating empty string using string builder
+        StringBuilder result = new StringBuilder(); // creating empty string using string builder
         for(int i=0; i<input.length(); i++){ // iterating whole string
             char ch = input.charAt(i); // storing each character of a string in character ch
             if(ch == 'a' || ch == 'A' || ch == 'e' || ch == 'E' || ch == 'i' || ch == 'I' ||
