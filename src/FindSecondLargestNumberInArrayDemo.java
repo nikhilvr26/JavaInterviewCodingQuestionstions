@@ -6,7 +6,7 @@ public class FindSecondLargestNumberInArrayDemo {
             if(i>largest){  // if current number is largest then we assign that value to largest
                 secondLargest = largest; // before that we assign the largest value to second largest
                 largest = i; // now largest have new largest value
-            } else if (i>secondLargest && i != largest) {
+            } else if (i>secondLargest && i < largest) {
                 secondLargest = i;
             }
         }

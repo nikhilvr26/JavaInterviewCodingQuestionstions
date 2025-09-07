@@ -15,6 +15,22 @@ public class CountVowelsAndConsonants {
         }
         System.out.println("Total counts for vowels is: "+countVowel+ " and consonants is: "+countConsonants);
     }
+    static void countConsonantsAndVowels(String str){
+        str = str.toLowerCase();
+        char[] ch = str.toCharArray();
+        int vowel = 0, consonants = 0;
+        for(char c : ch){
+            if(c >= 'a' && c <= 'z'){
+                if("aeiou".indexOf(c) != -1){
+                    vowel++;
+                }else {
+                    consonants++;
+                }
+            }
+        }
+        System.out.println("Vowels : "+vowel + " and Consonants : "+consonants);
+
+    }
     public static void main(String[] args) {
         String str = "Vowel check";
         countVowelsAndConsonants(str);
