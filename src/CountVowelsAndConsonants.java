@@ -34,5 +34,6 @@ public class CountVowelsAndConsonants {
     public static void main(String[] args) {
         String str = "Vowel check";
         countVowelsAndConsonants(str);
+        countConsonantsAndVowels(str);
     }
 }
