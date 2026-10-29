@@ -22,7 +22,6 @@ public class VowelCheckDemo {
         }else{
             System.out.println("String doesn't contain vowel");
         }
-        ///////////////////////////////
         if(checkVowel(str)){
             System.out.println("String contains vowel");
         }else{
